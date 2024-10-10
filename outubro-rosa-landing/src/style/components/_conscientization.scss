@@ -1,0 +1,37 @@
+#conscientization {
+  width: 100%;
+  height: auto;
+  background-color: $dark-pink;
+  padding: 2rem;
+
+  @include flexStyle(1.5rem, true, true);
+  @include textStyle($light-gray);
+
+  img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  #conscientization {
+    padding: 4rem 5rem;
+
+    @include flexStyle(5rem);
+  
+    img {
+      width: 30rem;
+    }
+  }
+}
+
+
+@media screen and (min-width: 960px) {
+  #conscientization {
+    @include flexStyle(7rem);
+  
+    img {
+      width: 80%;
+      height: 30rem;
+    }
+  }
+}
