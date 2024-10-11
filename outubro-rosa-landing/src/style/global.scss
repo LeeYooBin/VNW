@@ -1,47 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-
-$light-pink: #ffd9ec;
-$dark-pink: #ff69b4;
-$light-gray: #e4eef1;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  font-family: "Noto Sans", sans-serif;
-}
-
-@mixin flexStyle($gap: 0, $column: false, $reverse: false) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: $gap;
-
-  @media screen and (max-width: 760px) {
-    @if $column == true {
-      @if $reverse == true {
-        flex-direction: column-reverse;
-      } @else {
-        flex-direction: column;
-      }
-    }
-  }
-}
-
-@mixin textStyle($color: #000000) {
-  font-size: 1.5rem;
-  text-align: justify;
-  color: $color;
-  
-
-  @media screen and (min-width: 960px) {
-    font-size: 2rem;
-  }
-}
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/mixins";
 
 @import "./components/header";
 @import "./components/about";

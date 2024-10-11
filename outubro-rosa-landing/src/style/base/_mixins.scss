@@ -1,0 +1,27 @@
+@mixin flexStyle($gap: 0, $column: false, $reverse: false) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+
+  @media screen and (max-width: 760px) {
+    @if $column == true {
+      @if $reverse == true {
+        flex-direction: column-reverse;
+      } @else {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@mixin textStyle($color: #000000) {
+  font-size: 1.5rem;
+  text-align: justify;
+  color: $color;
+  
+
+  @media screen and (min-width: 960px) {
+    font-size: 2rem;
+  }
+}
