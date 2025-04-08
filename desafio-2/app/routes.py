@@ -1,5 +1,6 @@
 from flask import Blueprint, jsonify, request
-from app.models import db, Livro
+from app.models import Livro
+from .extensions import db
 
 bp = Blueprint("livros", __name__)
 
